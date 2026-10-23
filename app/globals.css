@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Paletă gândită pentru lumină puternică de șantier: contrast mare, fără gri-uri palide */
+@theme {
+  --color-tencuiala: #F4F5F2;   /* fundal */
+  --color-beton:     #CFD3CC;   /* linii, chenare */
+  --color-grafit:    #1C1F1D;   /* text */
+  --color-ultramarin:#2340C8;   /* acțiune principală (contrast 7.9:1 cu alb) */
+  --color-verde:     #1E7B3A;   /* succes / sincronizat */
+  --color-rosu:      #B42318;   /* eroare */
+  --color-ocru:      #B5650D;   /* offline / în așteptare */
+  --font-sans: var(--font-atkinson), system-ui, sans-serif;
+}
+
+html { -webkit-tap-highlight-color: transparent; }
+body { background: var(--color-tencuiala); color: var(--color-grafit); }
+:focus-visible { outline: 3px solid var(--color-ultramarin); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
